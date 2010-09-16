@@ -1,0 +1,7 @@
+function [ out ] = cannyedgedetector(in)
+
+%1 smoothing
+out = gaussianFiltering( in, 1 );
+
+%2 Gradient
+out = Sobel( out )
